@@ -32,10 +32,10 @@ export class DetailsProductsComponent implements OnInit, OnChanges {
 
   updateProducts(): void {
     const data = {
-      name: this.currentProducts.product_name,
-      details: this.currentProducts.product_details,
-      price: this.currentProducts.product_price,
-      quantity: this.currentProducts.product_quantity,
+      product_name: this.currentProducts.product_name,
+      product_details: this.currentProducts.product_details,
+      product_price: this.currentProducts.product_price,
+      product_quantity: this.currentProducts.product_quantity,
     };
 
     if (this.currentProducts.id) {

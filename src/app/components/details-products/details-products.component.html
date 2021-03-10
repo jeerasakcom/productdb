@@ -25,11 +25,11 @@
 
   </form>
 
-  <button class="badge badge-danger mr-2" (click)="deleteProducts()">
+  <button class="badge badge-danger" (click)="deleteProducts()">
     Delete
   </button>
 
-  <button type="submit" class="badge badge-success" (click)="updateProducts()">
+  <button type="submit" class="badge badge-warning" (click)="updateProducts()">
     Update
   </button>
   <p>{{ message }}</p>
@@ -37,5 +37,5 @@
 
 <div *ngIf="!currentProducts">
   <br />
-  <p>Cannot access this Tutorial...</p>
+  <p>Cannot access ...</p>
 </div>
