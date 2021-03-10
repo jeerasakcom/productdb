@@ -1,0 +1,22 @@
+<div class="list row">
+  <div class="col-md-6">
+    <h4>Products List</h4>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let products of products; let i = index" [class.active]="i == currentIndex"
+        (click)="setActiveTutorial(products, i)">
+        {{ products.product_name }}
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <div *ngIf="currentProducts">
+      <app-details-products (refreshList)="refreshList()" [products]="currentProducts">
+      </app-details-products>
+    </div>
+
+    <div *ngIf="!currentProducts">
+      <br />
+      <p>Please ...</p>
+    </div>
+  </div>
+</div>

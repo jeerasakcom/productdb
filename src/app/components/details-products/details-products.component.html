@@ -1,0 +1,41 @@
+<div *ngIf="currentProducts" class="edit-form">
+  <h4>Products</h4>
+  <form>
+    <div class="form-group">
+      <label for="name">Title</label>
+      <input type="text" class="form-control" id="name" [(ngModel)]="currentProducts.product_name" name="name" />
+    </div>
+    <div class="form-group">
+      <label for="details">Title</label>
+      <input type="text" class="form-control" id="details" [(ngModel)]="currentProducts.product_details"
+        name="details" />
+    </div>
+
+    <div class="form-group">
+      <label for="price">Title</label>
+      <input type="text" class="form-control" id="price" [(ngModel)]="currentProducts.product_price" name="price" />
+    </div>
+
+    <div class="form-group">
+      <label for="quantity">Title</label>
+      <input type="text" class="form-control" id="quantity" [(ngModel)]="currentProducts.product_quantity"
+        name="quantity" />
+    </div>
+
+
+  </form>
+
+  <button class="badge badge-danger mr-2" (click)="deleteProducts()">
+    Delete
+  </button>
+
+  <button type="submit" class="badge badge-success" (click)="updateProducts()">
+    Update
+  </button>
+  <p>{{ message }}</p>
+</div>
+
+<div *ngIf="!currentProducts">
+  <br />
+  <p>Cannot access this Tutorial...</p>
+</div>
